@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">CO2 Tracker</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#myaccount" class="nav-link">My account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#preferences" class="nav-link">Preferences</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#helpcenter" class="nav-link">Help Center</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <aside>
+            <div class="sidebar">
+                <ul>
+                    <li class="active">
+                        <a href="#reporting">
+                            <span class="icon"><i class="fa fa-pie-chart"></i></span>
+                            <span class="item">Reporting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#inventory">
+                            <span class="icon"><i class="fa fa-file-text-o"></i></span>
+                            <span class="item">Inventory</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#components">
+                            <span class="icon"><i class="fa fa-cube"></i></span>
+                            <span class="item">Components</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#database">
+                            <span class="icon"><i class="fa fa-database"></i></span>
+                            <span class="item">Database</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <span class="icon"><i class="fa fa-gear"></i></span>
+                            <span class="item">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="sidebar-display"><i class="fa fa-backward" aria-hidden="true"></i></div> -->
+            <div class="version">Version 2.4.0</div>
+        </aside>
+        <main>
+            <div class="notification">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <div class="notification-text"> Hello <span>Johan</span>! Please check the </div>
+                <a href="#release" class="release-link"> release</a>
+            </div>
+            <div class="chart">
+                <div class="chart-data">
+                    <h3 class="chart-title">GES</h3>
+                    <div class="chart-options">
+                        <div class="chart-option">
+                            <input type="checkbox" id="co2" name="co2" checked>
+                            <label for="co2">CO<sub>2</sub></label>
+                        </div>
+                        <div class="chart-option">
+                            <input type="checkbox" id="c2h4" name="c2h4">
+                            <label for="c2h4">C<sub>2</sub>H<sub>4</sub></label>
+                        </div>
+                        <div class="chart-option">
+                            <input type="checkbox" id="n2o" name="n2o">
+                            <label for="n2o">N<sub>2</sub>O</label>
+                        </div>
+                        <div class="chart-option">
+                            <input type="checkbox" id="other" name="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-graph">
+                    <div id="chartDiv" style="margin: 0px auto">
+                    </div>
+                    <button class="chart-download"><i class="fa fa-download" aria-hidden="true"></i> Download
+                        PDF</button>
+                </div>
+            </div>
+            <div class="bottom-container">
+                <div class="report">
+                    <!-- <div class="pie-container"> -->
+                    <div id="pieChartDiv"></div>
+                    <!-- </div> -->
+                    <h3 class="chart-title pie-chart-title">Emission Sources</h3>
+                    <button class="chart-analysis chart-download">Open Analysis</button>
+                    <span class="report-icon-info">
+                        <i class="report-icon fa fa-question-circle" aria-hidden="true"></i>
+                        <div class="report-info">The major emission sources are industries, transportation, biomass
+                            burning, brick kilns, pollen, desert dust, agriculture, sea salt, etc.</div>
+                    </span>
+                </div>
+                <div class="new-metric">
+                    <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                    <div>Add New Metric</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script> -->
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
